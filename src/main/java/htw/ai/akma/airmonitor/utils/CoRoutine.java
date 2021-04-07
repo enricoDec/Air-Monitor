@@ -7,9 +7,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.sql.Timestamp;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -37,6 +34,8 @@ public class CoRoutine {
 
         RestTemplate restTemplate = new RestTemplate();
         float result = Float.parseFloat(Objects.requireNonNull(restTemplate.getForObject(uri, String.class)));
+        //Round to 2 decimals
+        result = (float) (Math.round(result * 100.0) / 100.0);
 
         Co co = new Co();
         co.setPpm(result);

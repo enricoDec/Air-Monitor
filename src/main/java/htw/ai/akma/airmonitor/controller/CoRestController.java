@@ -46,7 +46,7 @@ public class CoRestController {
 
     @GetMapping(value = "/live")
     public ResponseEntity<Float> getPpm() {
-        final String uri = "http://192.168.2.223/temperature";
+        final String uri = "http://192.168.2.222/gas";
         RestTemplate restTemplate = new RestTemplate();
         float result = Float.parseFloat(Objects.requireNonNull(restTemplate.getForObject(uri, String.class)));
 

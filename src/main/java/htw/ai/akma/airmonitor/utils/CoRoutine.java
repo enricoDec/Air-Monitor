@@ -18,8 +18,8 @@ import java.util.Objects;
 
 @Component
 public class CoRoutine {
-    private static final int delay = 600000; //every 10min = 144 per day
-    //private static final int delay = 1000;
+//    private static final int delay = 600000; //every 10min = 144 per day
+    private static final int delay = 1000;
     private final CoRepository coRepository;
 
     public CoRoutine(CoRepository coRepository) {
@@ -29,7 +29,7 @@ public class CoRoutine {
     @Scheduled(fixedRate = delay)
     public void getCo() {
         //Sensor 0
-        final String uri = "http://192.168.2.223/temperature";
+        final String uri = "http://192.168.2.222/gas";
         final int sensorId = 0;
 
         RestTemplate restTemplate = new RestTemplate();

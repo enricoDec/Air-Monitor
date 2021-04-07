@@ -11,17 +11,21 @@
 </head>
 <body>
 <!--Custom Range-->
-<div id="wrapper">
-    <form>
-        <select id="customFrom">
-            <option value=10>10</option>
-            <option value=20>20</option>
-            <option value=30>30</option>
-            <option value=50>50</option>
-            <option value=144>144</option>
-        </select>
-    </form>
-    <button type="button" onclick="updateChart()">Confirm</button>
+<div class="flexbox-container">
+    <div class="flexbox-item flexbox-form">
+        <form>
+            <select id="customFrom">
+                <option value=10>10</option>
+                <option value=20>20</option>
+                <option value=30>30</option>
+                <option value=50>50</option>
+                <option value=144>144</option>
+            </select>
+        </form>
+    </div>
+    <div class="flexbox-item flexbox-button">
+        <button type="button" onclick="updateChart()">Confirm</button>
+    </div>
 </div>
 
 <figure class="highcharts-figure">

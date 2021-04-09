@@ -18,8 +18,8 @@ import java.util.Objects;
 
 @Component
 public class CoRoutine {
-//    private static final int delay = 600000; //every 10min = 144 per day
-    private static final int delay = 1000;
+    private static final int delay = 600000; //every 10min = 144 per day
+//    private static final int delay = 1000;
     private final CoRepository coRepository;
 
     public CoRoutine(CoRepository coRepository) {

@@ -1,12 +1,12 @@
 # Air-Monitor
 
 ## REST Endpoints
-|   | Endpoint         | HTTP Method | Reply      | Description                    |
-|---|------------------|-------------|------------|--------------------------------|
-| 1 | monitor/live     | GET         | HTML       | Live Chart of Sensor Data      |
-| 2 | monitor/history  | GET         | HTML       | History Chart of Sensor Data   |
-| 3 | monitor/co?last= | GET         | JSON       | Get last x Sensor Data from DB |
-| 4 | monitor/co/live  | GET         | plain/text | Get last Sensor Data from ESP  |
+|   | Endpoint         | HTTP Method | Content-Type     | Description                    |
+|---|------------------|-------------|------------------|--------------------------------|
+| 1 | monitor/live     | GET         | text/html        | Live Chart of Sensor Data      |
+| 2 | monitor/history  | GET         | text/html        | History Chart of Sensor Data   |
+| 3 | monitor/co?last= | GET         | application/json | Get last x Sensor Data from DB |
+| 4 | monitor/co/live  | GET         | plain/text       | Get last Sensor Data from ESP  |
 
 **JSON Reply of Endpoint 3**
 ``` JSON
